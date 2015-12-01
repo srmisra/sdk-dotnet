@@ -42,6 +42,10 @@
     <DocumentationFile>bin/Release/AuthorizeNet.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\AuthorizeNet.1.8.8\lib\AuthorizeNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -51,6 +55,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Security" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="*.cs" />
@@ -148,6 +155,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Api\ControllerTemplate.cst" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!--Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /-->
