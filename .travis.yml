@@ -23,7 +23,7 @@ script:
     - cp AuthorizeNETtest/App.config AuthorizeNETtest/AuthorizeNETtest.config
     - nunit-console ./AuthorizeNETtest/AuthorizeNETtest.csproj -run=AuthorizeNet.Api.Controllers.MockTest -exclude Integration,NotWorkingOnMono
     - export LD_LIBRARY_PATH=/usr/local/lib
-    - mono --debug --profile=monocov:outfile=monocovCoverage.cov,+AuthorizeNET ./NUnit-2.6.3/bin/nunit-console.exe --process=Single ./AuthorizeNETtest/bin/Debug/AuthorizeNETtest.dll
+    - mono --debug --profile=monocov:outfile=monocovCoverage.cov,+AuthorizeNET ./NUnit-2.6.3/bin/nunit-console.exe ./AuthorizeNETtest/bin/Debug/AuthorizeNETtest.dll
     - monocov --export-xml=monocovCoverage monocovCoverage.cov
     - cat monocovCoverage.cov
     - ls monocovCoverage
